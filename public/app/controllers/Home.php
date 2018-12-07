@@ -6,6 +6,7 @@ class Home extends Frontend_Controller {
     function __construct()
     {
         parent::__construct();
+        $this->data_to_header['section']="home";
     }
          
     public function index()

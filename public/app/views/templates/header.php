@@ -78,12 +78,12 @@
                                             <nav class="collapse">
                                                 <ul class="nav nav-pills" id="mainNav">
                                                     <li>
-                                                        <a class="nav-link active" href="/">
+                                                        <a class="nav-link <?php if ($section=="home") { echo "active"; } ?>" href="<?=base_url();?>">
                                                             Home
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="nav-link" href="/about">
+                                                        <a class="nav-link <?php if ($section=="about") { echo "active"; } ?>" href="<?=base_url("about");?>">
                                                             About Us
                                                         </a>
                                                     </li>
