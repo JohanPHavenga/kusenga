@@ -16,13 +16,13 @@
                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
                     data-y="center" data-voffset="['-80','-80','-80','-40']"
                     data-start="800"
-                    data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 32px;">Solutions for</h1>
+                    data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 32px;">Data insights for</h1>
 
                 <div class="tp-caption custom-secondary-font font-weight-bold text-color-light"
                      data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
                      data-y="center" data-voffset="['-42','-42','-42','2']"
                      data-start="800"
-                     data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 42px;">Pro Business Plan</div>
+                     data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 42px;">your business</div>
 
                 <a href="#about-us" class="btn btn-primary tp-caption text-uppercase text-color-light custom-border-radius"
                    data-hash
@@ -46,13 +46,13 @@
                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
                     data-y="center" data-voffset="['-80','-80','-80','-40']"
                     data-start="800"
-                    data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 32px;">Get your</h1>
+                    data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 32px;">from insights</h1>
 
                 <div class="tp-caption custom-secondary-font font-weight-bold text-color-light"
                      data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
                      data-y="center" data-voffset="['-42','-42','-42','2']"
                      data-start="800"
-                     data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 42px;">Free Consultation</div>
+                     data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 42px;">to actions</div>
 
                 <a href="#about-us" class="btn btn-primary tp-caption text-uppercase text-color-light custom-border-radius"
                    data-hash
@@ -72,9 +72,9 @@
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-7">
                 <div class="looking-for-box">
-                    <h2>- <span class="text-1 custom-secondary-font">Are you looking for a</span><br>
-                        Business Plan Consultant?</h2>
-                    <p>Schedule your company strategy right session now</p>
+                    <h2>- <span class="text-1 custom-secondary-font">Are you looking for an</span><br>
+                        edge in your business?</h2>
+                    <p>let us help you create actionable insights</p>
                 </div>
             </div>
             <div class="col-md-3 d-flex justify-content-md-end mb-4 mb-md-0">

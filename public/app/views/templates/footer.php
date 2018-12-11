@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="col-md-6 custom-sm-margin-top">
                                     <h4 class="mb-1">Our Location</h4>
-                                    <p class="custom-opacity-font">Porto Business Consulting 123 Porto Blvd, Suite 100 New York, NY</p>
+                                    <p class="custom-opacity-font">Unit 14 Nooitegdacht Estate ,Burgundy Estate ,Table View 7441, SA</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -28,7 +28,7 @@
                                         <span class="custom-call-to-action-2 text-color-light text-2 custom-opacity-font">
                                             Email
                                             <span class="info text-5">
-                                                mail@example.com
+                                                info@kusenga.com
                                             </span>
                                         </span>
                                     </a>
