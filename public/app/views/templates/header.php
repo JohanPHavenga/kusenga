@@ -20,39 +20,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
         <!-- Web Fonts  -->
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CSintony:400,700" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CSintony:400,700" rel="stylesheet" type="text/css">        
+        
+        <!-- Favicons  -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#333333">
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        
         <!-- Vendor CSS -->
-        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="vendor/animate/animate.min.css">
-        <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-        <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="/vendor/animate/animate.min.css">
+        <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
 
         <!-- Theme CSS -->
-        <link rel="stylesheet" href="assets/css/theme.css">
-        <link rel="stylesheet" href="assets/css/theme-elements.css">
-        <link rel="stylesheet" href="assets/css/theme-blog.css">
-        <link rel="stylesheet" href="assets/css/theme-shop.css">
+        <link rel="stylesheet" href="/assets/css/theme.css">
+        <link rel="stylesheet" href="/assets/css/theme-elements.css">
+        <link rel="stylesheet" href="/assets/css/theme-blog.css">
+        <link rel="stylesheet" href="/assets/css/theme-shop.css">
 
         <!-- Current Page CSS -->
-        <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
-        <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
-        <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+        <link rel="stylesheet" href="/vendor/rs-plugin/css/settings.css">
+        <link rel="stylesheet" href="/vendor/rs-plugin/css/layers.css">
+        <link rel="stylesheet" href="/vendor/rs-plugin/css/navigation.css">
 
         <!-- Demo CSS -->
-        <link rel="stylesheet" href="assets/css/demo-business-consulting.css">
+        <link rel="stylesheet" href="/assets/css/demo-business-consulting.css">
 
         <!-- Skin CSS -->
-        <link rel="stylesheet" href="assets/css/skin-business-consulting.css"> 
+        <link rel="stylesheet" href="/assets/css/skin-business-consulting.css"> 
 
         <!-- Theme Custom CSS -->
-        <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="/assets/css/custom.css">
 
         <!-- Head Libs -->
-        <script src="vendor/modernizr/modernizr.min.js"></script>
+        <script src="/vendor/modernizr/modernizr.min.js"></script>
 
     </head>
     <body>
@@ -66,7 +77,7 @@
                                 <div class="header-row">
                                     <div class="header-logo">
                                         <a href="/">
-                                            <img alt="Porto" width="149" height="40" src="assets/img/logo-default-slim-dark.png">
+                                            <img alt="Porto" width="149" height="40" src="/assets/img/logo-default-slim-dark.png">
                                         </a>
                                     </div>
                                 </div>
