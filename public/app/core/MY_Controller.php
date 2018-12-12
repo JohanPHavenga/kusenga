@@ -14,7 +14,6 @@ class MY_Controller extends CI_Controller {
 
 }
 
-
 class Frontend_Controller extends MY_Controller {
 
     public $data_to_header=[];
@@ -26,6 +25,7 @@ class Frontend_Controller extends MY_Controller {
 
     function __construct()
     {
+        $this->data_to_header['section']="";
         parent::__construct();                
     }    
 
@@ -42,7 +42,16 @@ class Admin_Controller extends MY_Controller {
 
     function __construct()
     {
-        parent::__construct();                
-    }    
+        parent::__construct();      
+        // Check login, load back end dependencies
+        if (!$this->session->has_userdata('admin_logged_in')) {
+            $this->session->set_flashdata([
+                'alert' => "You are not logged in. Please log in to continue.",
+                'status' => "danger",
+            ]);
+            redirect('/login/admin');
+            exit();
+        }
+    }
 
 }
