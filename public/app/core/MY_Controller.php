@@ -34,10 +34,12 @@ class Frontend_Controller extends MY_Controller {
 class Admin_Controller extends MY_Controller {
 
     public $data_to_header=[];
+    public $data_to_sidebar=[];
     public $data_to_view=[];
     public $data_to_footer=[];
 
     public $header_url='templates/admin/header';
+    public $sidebar_url='templates/admin/sidebar';
     public $footer_url='templates/admin/footer';
 
     function __construct()
