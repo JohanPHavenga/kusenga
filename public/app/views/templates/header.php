@@ -99,7 +99,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="nav-link" href="">
+                                                        <a class="nav-link <?php if ($section=="expertise") { echo "active"; } ?>" href="<?=base_url("expertise");?>">
                                                             Expertise
                                                         </a>
                                                     </li>
@@ -110,7 +110,7 @@
                                                     </li>
                                                     <li>
                                                         <a class="nav-link" <?php if ($section=="blog") { echo "active"; } ?>" href="<?=base_url("blog");?>">
-                                                            Blog
+                                                            News
                                                         </a>
                                                     </li>
                                                     <li>

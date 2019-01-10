@@ -2,15 +2,15 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-                <h1>- About Us</h1>
-                <span class="d-block text-4">Who We Are</span>
+                <h1>- About </h1>
+                <span class="d-block text-4">Who we are</span>
             </div>
             <div class="col-md-4 order-1 order-md-2 align-self-center">
                 <ul class="breadcrumb d-block text-md-right breadcrumb-light">
                     <li><a href="/">Home</a></li>
                     <li class="active">About Us</li>
                 </ul>
-            </div>
+            </div> 
         </div>
     </div>
 </section>
@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row pt-1 pb-4 mb-3">
         <div class="col">
-            <p class="lead mb-4">Founded in 2001 by John Doe, gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
+            <p class="lead mb-4">Founded in 2018 by Morne van der Westhuizen and Charles Fourie, Kusenga which meansgravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae.</p>
 

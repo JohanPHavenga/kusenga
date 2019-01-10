@@ -3,7 +3,9 @@
                     <div class="row justify-content-md-center">
                         <div class="col-lg-6 mb-5 mb-lg-0">
                             <h2 class="font-weight-bold">- Contact Us</h2>
-                            <p class="custom-opacity-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper.</p>
+                            <p class="custom-opacity-font">
+                                We would love to hear from you. get in touch with us to begin the next part of your business discovery.
+                            </p>
                             <div class="row">
                                 <div class="col-md-6 custom-sm-margin-top">
                                     <h4 class="mb-1">Call Us</h4>
@@ -11,14 +13,14 @@
                                         <span class="custom-call-to-action-2 text-color-light text-2 custom-opacity-font">
                                             Phone
                                             <span class="info text-5">
-                                                123-456-7890
+                                                061-161-1847
                                             </span>
                                         </span>
                                     </a>
                                 </div>
                                 <div class="col-md-6 custom-sm-margin-top">
                                     <h4 class="mb-1">Our Location</h4>
-                                    <p class="custom-opacity-font">Unit 14 Nooitegdacht Estate ,Burgundy Estate ,Table View 7441, SA</p>
+                                    <p class="custom-opacity-font">Unit 14 Nooitegdacht Estate, Burgundy Estate ,Table View 7441, SA</p>
                                 </div>
                             </div>
                             <div class="row">
