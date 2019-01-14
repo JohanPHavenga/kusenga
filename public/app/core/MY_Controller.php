@@ -1,4 +1,5 @@
 <?php
+
 // core/MY_Controller.php
 /**
  * Base Controller
@@ -6,8 +7,7 @@
  */
 class MY_Controller extends CI_Controller {
 
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
         // Load any front-end only dependencies
     }
@@ -16,19 +16,18 @@ class MY_Controller extends CI_Controller {
 
 class Frontend_Controller extends MY_Controller {
 
-    public $data_to_header=[];
-    public $data_to_view=[];
-    public $data_to_footer=[];
-
-    public $header_url='templates/header';
-    public $footer_url='templates/footer';
+    public $data_to_header = [];
+    public $data_to_view = [];
+    public $data_to_footer = [];
+    public $header_url = 'templates/header';
+    public $footer_url = 'templates/footer';
 
     function __construct()
     {
         $this->data_to_header['section']="";
         parent::__construct();                
-    }    
-
+    } 
+    
 }
 
 class Admin_Controller extends MY_Controller {
@@ -55,5 +54,4 @@ class Admin_Controller extends MY_Controller {
             exit();
         }
     }
-
 }
