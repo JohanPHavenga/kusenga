@@ -5,7 +5,7 @@
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title">
-                <h1>Admin Dashboard
+                <h1>News
                 </h1>
             </div>
             <!-- END PAGE TITLE -->
@@ -17,13 +17,13 @@
                 <a href="/admin">Home</a> | 
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="#">News</a>
             </li>
         </ul>
         <!-- END PAGE BREADCRUMB -->
         <!-- BEGIN PAGE BASE CONTENT -->
         <div class="note note-info">
-            <p> Welcome, to the real world </p>
+            <p> News list goes here</p>
         </div>
         <!-- END PAGE BASE CONTENT -->
     </div>
