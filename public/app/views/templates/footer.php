@@ -1,4 +1,4 @@
-            <section class="section section-text-light section-background m-0" style="background: url('assets/img/contact-background.jpg'); background-size: cover;">
+            <section class="section section-text-light section-background m-0" style="background: url('/assets/img/contact-background.jpg'); background-size: cover;">
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-lg-6 mb-5 mb-lg-0">
