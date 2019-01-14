@@ -104,17 +104,17 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="nav-link" href="">
+                                                        <a class="nav-link <?php if ($section=="team") { echo "active"; } ?>" href="<?=base_url("team");?>">
                                                             Team
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="nav-link" <?php if ($section=="blog") { echo "active"; } ?>" href="<?=base_url("blog");?>">
+                                                        <a class="nav-link <?php if ($section=="news") { echo "active"; } ?>" href="<?=base_url("news");?>">
                                                             News
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="nav-link" href="">
+                                                        <a class="nav-link <?php if ($section=="contact") { echo "active"; } ?>" href="<?=base_url("contact");?>">
                                                             Contact Us
                                                         </a>
                                                     </li>
