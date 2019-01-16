@@ -28,7 +28,7 @@ if ( ! function_exists('fdisplayCurrency'))
     {
         if ($amount)
         {            
-            return "R ".number_format($amount, $des, '.', ' ');
+            return "R".number_format($amount, $des, '.', '');
         } else {
             return false;
         }
@@ -40,11 +40,24 @@ if ( ! function_exists('fdisplayCurrency'))
 // ================================================================
 // Formulate Dates / TIME
 // ================================================================
+if ( ! function_exists('fdateDay'))
+{
+    function fdateDay($date) 
+    {
+        if ($date>0)
+        {
+            return date("d",strtotime($date));
+        } else {
+            return false;
+        }
+    }
+}
+
 if ( ! function_exists('fdateShort'))
 {
     function fdateShort($date) 
     {
-        if ($date)
+        if ($date>0)
         {
             return date("Y-m-d",strtotime($date));
         } else {
@@ -57,10 +70,9 @@ if ( ! function_exists('fdateHuman'))
 {
     function fdateHuman($date) 
     {
-        if ($date)
+        if ($date>0)
         {
-//            return date("j F Y",strtotime($date));
-            return strftime("%e %B %G",strtotime($date));
+            return date("D j M",strtotime($date));
         } else {
             return false;
         }
@@ -98,21 +110,6 @@ if ( ! function_exists('fdateYear'))
     }
 }
 
-if ( ! function_exists('fdateMonthLong'))
-{
-    function fdateMonthLong($date) 
-    {
-        if ($date)
-        {
-            //return date("F",strtotime($date));
-            return strftime("%B",strtotime($date));
-            
-        } else {
-            return false;
-        }
-    }
-}
-
 if ( ! function_exists('ftimeSort'))
 {
     function ftimeSort($time) 
@@ -121,7 +118,7 @@ if ( ! function_exists('ftimeSort'))
         {
             return date("H:i",strtotime($time));
         } else {
-            return false;
+            return 0;
         }
     }
 }
@@ -138,6 +135,21 @@ if ( ! function_exists('fdateToCal'))
         }
     }
 }
+
+if ( ! function_exists('fdateStructured'))
+{
+    function fdateStructured($timestamp) {
+        if ($timestamp)
+        {
+            return date('Y-m-d\TH:i:s'.'+02:00', strtotime($timestamp));
+        } else {
+            return false;
+        }
+    }
+}
+
+
+//                    $sEvent[]='"startDate": "'.$race_start_date.'T'.$race['race_time_start'].'+02:00",';
 
 // ================================================================
 // Formulate Lables
@@ -165,24 +177,24 @@ if ( ! function_exists('flableStatus'))
     {
         switch ($status_num) {
             case 1:
-                $text="Published";
+                $text="Active";
                 $status="success";
                 break;
-            default:
-                $text="Not Published";
+            case 2:
+                $text="Not Active";
                 $status="danger";
+                break;
+            case 3:
+                $text="Cancelled";
+                $status="warning";
+                break;
+            default:
+                $text="No Status";
+                $status="warning";
                 break;
         }
        
         return flable($text, $status, "sm");      
-    }
-}
-
-if ( ! function_exists('flableFeatured')) 
-{
-    function flableFeatured($code) 
-    {
-        return flable($code, "primary", "med");      
     }
 }
 
@@ -193,7 +205,7 @@ if ( ! function_exists('flableFeatured'))
 // ================================================================
 if ( ! function_exists('fbutton')) 
 {
-    function fbutton($text="Submit",$type="submit",$status="default",$size=NULL) 
+    function fbutton($text="Submit",$type="submit",$status="default",$size=NULL,$name="") 
     {
         // status: default|primary|success|warning|danger|link
         // size: lg|sm|xs
@@ -206,7 +218,7 @@ if ( ! function_exists('fbutton'))
         {
             $btn_size=NULL;
         }
-        return "<button type='$type' class='btn btn-$status $btn_size'>$text</button>";
+        return "<button type='$type' name='$name' class='btn btn-$status $btn_size'>$text</button>";
     }
 }
 
@@ -247,7 +259,7 @@ if ( ! function_exists('fbuttonLinkGroup'))
 
 if ( ! function_exists('fbuttonActionGroup')) 
 {
-    function fbuttonActionGroup($action_array) 
+    function fbuttonActionGroup2($action_array) 
     {
         $html="<div class='btn-group'>";
         foreach ($action_array as $action_item) {
@@ -265,11 +277,11 @@ if ( ! function_exists('fbuttonActionGroup'))
         return $html;
     }
     
-    function fbuttonActionGroup2($action_array) 
+    function fbuttonActionGroup($action_array) 
     {
         $html="<div class='btn-group'>";
         $html.="<button class='btn btn-xs default dropdown-toggle' type='button' data-toggle='dropdown' aria-expanded='false'> Actions <i class='fa fa-angle-down'></i></button>";
-        $html.="<ul class='dropdown-menu pull-left' role='menu'>";
+        $html.="<ul class='dropdown-menu pull-right' role='menu'>";
         foreach ($action_array as $action_item) {
             // confirmation
             if (isset($action_item['confirmation_text'])) {

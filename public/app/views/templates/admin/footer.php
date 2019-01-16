@@ -21,9 +21,13 @@
         <script src="/assets/admin/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/jquery.blockui.min.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <script src="/assets/admin/scripts/datatable.js" type="text/javascript"></script>
+        <script src="/assets/admin/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="/assets/admin/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/assets/admin/scripts/app.min.js" type="text/javascript"></script>
+        <script src="/assets/admin/scripts/table-datatables-managed.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="/assets/admin/scripts/layout.min.js" type="text/javascript"></script>

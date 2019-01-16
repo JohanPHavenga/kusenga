@@ -18,6 +18,8 @@
         <link href="/assets/admin/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="/assets/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="/assets/admin/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/admin/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/admin/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="/assets/admin/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
