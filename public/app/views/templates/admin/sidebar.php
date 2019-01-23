@@ -15,9 +15,9 @@
                     <span class="title">News</span>
                 </a>
             </li> 
-            <li class="nav-item <?php if ($section=="users") { echo "active"; } ?>">
-                <a href="/admin/users" class="nav-link nav-toggle">
-                    <i class="icon-users"></i>
+            <li class="nav-item <?php if ($section=="user") { echo "active"; } ?>">
+                <a href="/admin/user" class="nav-link nav-toggle">
+                    <i class="icon-user"></i>
                     <span class="title">Users</span>
                 </a>
             </li> 

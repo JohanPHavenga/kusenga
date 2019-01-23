@@ -277,21 +277,25 @@ if ( ! function_exists('fbuttonActionGroup'))
         return $html;
     }
     
-    function fbuttonActionGroup($action_array) 
+    function fbuttonActionGroup($action_array=[]) 
     {
-        $html="<div class='btn-group'>";
-        $html.="<button class='btn btn-xs default dropdown-toggle' type='button' data-toggle='dropdown' aria-expanded='false'> Actions <i class='fa fa-angle-down'></i></button>";
-        $html.="<ul class='dropdown-menu pull-right' role='menu'>";
-        foreach ($action_array as $action_item) {
-            // confirmation
-            if (isset($action_item['confirmation_text'])) {
-               $confirm="data-toggle='confirmation' data-original-title='".$action_item['confirmation_text']."'";
-            } else {
-                $confirm="";
+        $html="<small><b>Administrator</b></small>";
+        
+        if (!empty($action_array)) {
+            $html="<div class='btn-group'>";
+            $html.="<button class='btn btn-xs default dropdown-toggle' type='button' data-toggle='dropdown' aria-expanded='false'> Actions <i class='fa fa-angle-down'></i></button>";
+            $html.="<ul class='dropdown-menu pull-right' role='menu'>";
+            foreach ($action_array as $action_item) {
+                // confirmation
+                if (isset($action_item['confirmation_text'])) {
+                   $confirm="data-toggle='confirmation' data-original-title='".$action_item['confirmation_text']."'";
+                } else {
+                    $confirm="";
+                }
+                $html.="<li><a href='".$action_item['url']."' $confirm><i class='".$action_item['icon']."'></i> ".$action_item['text']." </a>";
             }
-            $html.="<li><a href='".$action_item['url']."' $confirm><i class='".$action_item['icon']."'></i> ".$action_item['text']." </a>";
-        }
-        $html.="</ul></div>";
+            $html.="</ul></div>";
+        } 
         
         return $html;
     }

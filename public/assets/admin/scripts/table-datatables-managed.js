@@ -1,7 +1,7 @@
 var TableDatatablesManaged = function () {
     
     var initUsersTable = function () {
-        var table = $('#users_table');
+        var table = $('#user_table');
         table.dataTable({
             order: [[0,"desc"]],
             responsive: true,
@@ -10,7 +10,7 @@ var TableDatatablesManaged = function () {
                 { searchable: false, targets: [4] },
                 { responsivePriority: 1, targets: 0 },
                 { responsivePriority: 2, targets: -1 },
-                { responsivePriority: 3, targets: 3 }
+                { responsivePriority: 3, targets: 1 }
                 
             ]
         });   

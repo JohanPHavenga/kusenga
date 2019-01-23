@@ -24,6 +24,7 @@
         <script src="/assets/admin/scripts/datatable.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/datatables/datatables.min.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+        <script src="/assets/admin/plugins/bootstrap-confirmation/bootstrap-confirmation.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/assets/admin/scripts/app.min.js" type="text/javascript"></script>

@@ -22,37 +22,39 @@
         </ul>
         <!-- END PAGE BREADCRUMB -->
         <!-- BEGIN PAGE BASE CONTENT -->
-        <div class="note note-info">
-            <p> Below a list of users that can access the site</p>
-        </div>
+        <?= $notice ;?>
 
         <div class="portlet light bordered">
             <div class="portlet-body">
                 <?php
                 if (!(empty($user_list))) {
                     // create table
-                    $this->table->set_template(ftable('users_table'));
+                    $this->table->set_template(ftable('user_table'));
                     $heading = ["ID", "Name", "Surname", "Email", "Actions"];
                     $this->table->set_heading($heading);
                     foreach ($user_list as $id => $data_entry) {
 
-                        $action_array = [
-                            [
-                                "url" => "/admin/users/create/edit/" . $data_entry['user_id'],
-                                "text" => "Edit",
-                                "icon" => "icon-pencil",
-                            ],
-                            [
-                                "url" => "/admin/users/delete/" . $data_entry['user_id'],
-                                "text" => "Delete",
-                                "icon" => "icon-dislike",
-                                "confirmation_text" => "<b>Are you sure?</b>",
-                            ],
-                        ];
+                        $edit_url="/admin/user/create/edit/" . $data_entry['user_id'];
+                        $action_array=[];
+                        if ($data_entry['user_id']>2) {
+                            $action_array = [
+                                [
+                                    "url" => $edit_url,
+                                    "text" => "Edit",
+                                    "icon" => "icon-pencil",
+                                ],
+                                [
+                                    "url" => "/admin/user/delete/" . $data_entry['user_id'],
+                                    "text" => "Delete",
+                                    "icon" => "icon-dislike",
+                                    "confirmation_text" => "<b>Are you sure?</b>",
+                                ],
+                            ];
+                        }
 
 
                         $row['id'] = $data_entry['user_id'];
-                        $row['name'] = $data_entry['user_name'];
+                        $row['name'] = "<a href='$edit_url' title='Edit User'>".$data_entry['user_name']."</a>";
                         $row['surname'] = $data_entry['user_surname'];
                         $row['email'] = $data_entry['user_email'];
                         $row['actions'] = fbuttonActionGroup($action_array);

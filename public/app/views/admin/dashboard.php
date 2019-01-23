@@ -21,11 +21,9 @@
             </li>
         </ul>
         <!-- END PAGE BREADCRUMB -->
-        <!-- BEGIN PAGE BASE CONTENT -->
-        <div class="note note-info">
-            <p> Welcome, to the real world </p>
-        </div>
-        <!-- END PAGE BASE CONTENT -->
+        
+        <?= $notice ;?>
+        
     </div>
     <!-- END CONTENT BODY -->
 </div>

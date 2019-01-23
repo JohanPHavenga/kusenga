@@ -52,6 +52,22 @@ class Admin_Controller extends MY_Controller {
             ]);
             redirect('/login/admin');
             exit();
+        }        
+    }
+    
+    public function get_notice($notice) {
+        if ($this->session->flashdata('alert')) {
+            $alert_msg = $this->session->flashdata('alert');
+            if (!($this->session->flashdata('status'))) {
+                $status = 'warning';
+            } else {
+                $status = $this->session->flashdata('status');
+            }
+            return "<div class='note note-$status' role='alert'>$alert_msg</div>";
+        }
+        else 
+        {
+            return "<div class='note note-info'><p>$notice</p></div>";
         }
     }
 }

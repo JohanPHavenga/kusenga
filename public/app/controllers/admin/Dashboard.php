@@ -11,6 +11,8 @@ class Dashboard extends Admin_Controller {
 
     public function index() {        
         $this->data_to_header['title'] = "Admin Dashboard";  
+        
+        $this->data_to_view['notice']=$this->get_notice("Welcome, to the real world");
 
         $this->load->view($this->header_url, $this->data_to_header);
         $this->load->view($this->sidebar_url, $this->data_to_sidebar);

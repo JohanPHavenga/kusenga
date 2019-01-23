@@ -103,7 +103,7 @@ class User_model extends MY_model {
                 // add updated date to both data arrays
                 $user_data['updated_date']=date("Y-m-d H:i:s");
                 //check of password wat gepost is alreeds gehash is
-                if (@$this->check_password($this->input->post('user_password'),$user_id))
+                if ($this->check_password($this->input->post('user_password'),$user_id))
                 {
                     unset($user_data['user_password']);
                 }

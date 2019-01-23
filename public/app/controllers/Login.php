@@ -71,7 +71,7 @@ class Login extends Frontend_Controller {
                 $this->session->set_userdata("admin_user",$check_login);
 
                 $this->session->set_flashdata([
-                    'alert'=>"Login successfull",
+                    'alert'=>"Login successful. Welcome, to the real world",
                     'status'=>"success",
                     ]);
                 
