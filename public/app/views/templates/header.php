@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-        <title>Kusenga - Accessible Insights</title>	
+        <title>Kusenga - <?= $page_title; ?></title>	
 
         <meta name="keywords" content="Kusenga" />
         <meta name="description" content="Kusenga - Accessible Insights">

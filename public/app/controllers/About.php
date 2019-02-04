@@ -7,6 +7,7 @@ class About extends Frontend_Controller {
     {
         parent::__construct();
         $this->data_to_header['section']="about";
+        $this->data_to_header['page_title']="About Us";
     }
          
     public function index()

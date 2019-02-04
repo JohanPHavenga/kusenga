@@ -25,6 +25,7 @@ class Frontend_Controller extends MY_Controller {
     function __construct()
     {
         $this->data_to_header['section']="";
+        $this->data_to_header['page_title']="Accessible Insights";
         parent::__construct();                
     } 
     

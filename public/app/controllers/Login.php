@@ -35,7 +35,7 @@ class Login extends Frontend_Controller {
 
     public function admin($submit=false)
     {
-        $this->data_to_header['title'] = "Admin Login";
+        $this->data_to_header['page_title'] = "Admin Login";
         $this->data_to_header['meta_robots']="noindex, nofollow";
         $this->data_to_view['form_url'] = '/login/admin/submit';
         $this->data_to_view['error_url'] = '/login/admin';

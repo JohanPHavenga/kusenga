@@ -7,6 +7,7 @@ class Team extends Frontend_Controller {
     {
         parent::__construct();
         $this->data_to_header['section']="team";
+        $this->data_to_header['page_title']="Team";
     }
          
     public function index()

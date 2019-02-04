@@ -11,10 +11,14 @@ class News_model extends MY_model {
             return $this->db->count_all("news");
         }
         
-        public function get_news_list()
+        public function get_news_list($limit=1000)
         {  
-            $this->db->select("*");
+            $this->db->select("news.*,author_name, author_surname");
             $this->db->from("news");
+            $this->db->join('news_author', 'news_id', 'left');
+            $this->db->join('authors', 'author_id', 'left');
+            $this->db->order_by("news_posted_date","DESC");
+            $this->db->limit($limit);
             $query = $this->db->get();
 
             if ($query->num_rows() > 0) {
@@ -35,7 +39,11 @@ class News_model extends MY_model {
             } 
             else 
             {
-                $this->db->select("news.*");
+                $this->db->select("news.*, user_name, user_surname, authors.*");
+                $this->db->from("news");
+                $this->db->join('users', 'user_id', 'left');
+                $this->db->join('news_author', 'news_id', 'left');
+                $this->db->join('authors', 'author_id', 'left');
                 $this->db->where('news_id', $id);
                 $query = $this->db->get();
 
