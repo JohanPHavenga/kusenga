@@ -15,6 +15,23 @@ var TableDatatablesManaged = function () {
             ]
         });   
     };
+    
+    var initNewsTable = function () {
+        var table = $('#news_table');
+        table.dataTable({
+            order: [[3,"desc"]],
+            responsive: true,
+            columnDefs: [
+                { orderable: false, targets: [4] }, 
+                { searchable: false, targets: [4] },
+                { responsivePriority: 1, targets: 0 },
+                { responsivePriority: 2, targets: -1 },
+                { responsivePriority: 3, targets: 1 },
+                { responsivePriority: 4, targets: 3 }
+                
+            ]
+        });   
+    };
 
     return {
         //main function to initiate the module
@@ -23,6 +40,7 @@ var TableDatatablesManaged = function () {
                 return;
             }
             initUsersTable();
+            initNewsTable();
         }
     };
 

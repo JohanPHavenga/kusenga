@@ -13,8 +13,9 @@ class News_model extends MY_model {
         
         public function get_news_list($limit=1000)
         {  
-            $this->db->select("news.*,author_name, author_surname");
+            $this->db->select("news.*,user_name, user_surname, author_name, author_surname");
             $this->db->from("news");
+            $this->db->join('users', 'user_id', 'left');
             $this->db->join('news_author', 'news_id', 'left');
             $this->db->join('authors', 'author_id', 'left');
             $this->db->order_by("news_posted_date","DESC");
@@ -54,6 +55,24 @@ class News_model extends MY_model {
             }
 
         }
+        
+        public function get_status_dropdown()
+        {
+            $this->db->select("*");
+            $this->db->from("status");
+            $query = $this->db->get();
+
+            if ($query->num_rows() > 0) {
+                $data[] = "Please Select";
+                foreach ($query->result_array() as $row) {
+                    $data[$row['status_id']] = $row['status_name'];
+                }
+                return $data;
+            }
+            return false;
+        }
+        
+        
         
 //        public function set_club($action, $club_id)
 //        {            
