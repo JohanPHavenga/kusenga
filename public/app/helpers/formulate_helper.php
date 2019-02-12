@@ -177,15 +177,15 @@ if ( ! function_exists('flableStatus'))
     {
         switch ($status_num) {
             case 1:
-                $text="Active";
+                $text="Published";
                 $status="success";
                 break;
             case 2:
-                $text="Not Active";
+                $text="Unpublished";
                 $status="danger";
                 break;
             case 3:
-                $text="Cancelled";
+                $text="Removed";
                 $status="warning";
                 break;
             default:

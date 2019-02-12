@@ -79,7 +79,7 @@ class News_model extends MY_model {
         switch ($action) {
             case "add":
                 $this->db->trans_start();
-                $this->db->insert('newss', $news_data);
+                $this->db->insert('news', $news_data);
                 // get edition ID from Insert
                 $news_id = $this->db->insert_id();
                 // update data array

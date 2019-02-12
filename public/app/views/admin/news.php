@@ -30,7 +30,7 @@
                 if (!(empty($news_list))) {
                     // create table
                     $this->table->set_template(ftable('news_table'));
-                    $heading = ["ID", "Heading", "Posted By", "Date", "Actions"];
+                    $heading = ["ID", "Heading", "Status","Posted By", "Publish Date", "Actions"];
                     $this->table->set_heading($heading);
                     foreach ($news_list as $id => $data_entry) {
 
@@ -51,8 +51,9 @@
 
                         $row['id'] = $data_entry['news_id'];
                         $row['heading'] = "<a href='$edit_url' title='Edit article'>".$data_entry['news_heading']."</a>";
+                        $row['status'] = flableStatus($data_entry['news_status']);
                         $row['posted_by'] = $data_entry['user_name']." ".$data_entry['user_surname'];
-                        $row['date'] = $data_entry['news_posted_date'];
+                        $row['date'] = fdateShort($data_entry['news_posted_date']);
                         $row['actions'] = fbuttonActionGroup($action_array);
 
                         $this->table->add_row($row);

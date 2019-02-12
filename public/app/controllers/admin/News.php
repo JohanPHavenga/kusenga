@@ -48,7 +48,7 @@ class News extends Admin_Controller {
         {
             $this->data_to_view['news_detail']=$this->news_model->get_news_detail($id);
             $this->data_to_view['form_url']=$this->create_url."/".$action."/".$id;
-        } else {
+        } else {            
             $this->data_to_view['news_detail']['news_status']=2;
         }
 
@@ -56,11 +56,14 @@ class News extends Admin_Controller {
         $this->form_validation->set_rules('news_heading', 'Heading', 'required');
         $this->form_validation->set_rules('news_content', 'Content', 'trim|required');
         $this->form_validation->set_rules('news_posted_date', 'Date to be posted', 'date|required');
+        $this->form_validation->set_rules('news_status', 'Article Status', 'required');
         $this->form_validation->set_rules('news_org_url', 'Origin URL', 'valid_url');
 
         // load correct view
         if ($this->form_validation->run() === FALSE)
         {
+            // put all the fields from post into array
+            foreach ($_POST as $field=>$value) { $this->data_to_view['news_detail'][$field]=$value; }
             $this->data_to_view['return_url']=$this->return_url;
             $this->load->view($this->header_url, $this->data_to_header);
             $this->load->view($this->sidebar_url, $this->data_to_sidebar);
@@ -98,13 +101,7 @@ class News extends Admin_Controller {
 
     public function delete($news_id=0) {        
         
-        if ($news_id<=2) {
-            $this->session->set_flashdata('alert', 'Cannot delete record: '.$news_id);
-            $this->session->set_flashdata('status', 'danger');
-            redirect($this->return_url);
-            die();
-        }
-        
+                
         // get news detail for nice delete message
         $news_detail=$this->news_model->get_news_detail($news_id);
         // delete record
@@ -112,7 +109,7 @@ class News extends Admin_Controller {
         
         if ($db_del)
         {
-            $msg="User has successfully been deleted: <b>".$news_detail['news_name']." ".$news_detail['news_surname']."</b>";
+            $msg="Article has successfully been deleted: <b>".$news_detail['news_heading']."</b>";
             $status="success";
         }
         else

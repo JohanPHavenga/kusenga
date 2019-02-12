@@ -26,11 +26,14 @@
         <script src="/assets/admin/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/bootstrap-confirmation/bootstrap-confirmation.js" type="text/javascript"></script>
         <script src="/assets/admin/plugins/bootstrap-summernote/summernote.min.js" type="text/javascript"></script>
+        <script src="/assets/admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="/assets/admin/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/assets/admin/scripts/app.min.js" type="text/javascript"></script>
         <script src="/assets/admin/scripts/table-datatables-managed.js" type="text/javascript"></script>
         <script src="/assets/admin/scripts/components-editors.js" type="text/javascript"></script>
+        <script src="/assets/admin/scripts/components-date-time-pickers.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="/assets/admin/scripts/layout.min.js" type="text/javascript"></script>
