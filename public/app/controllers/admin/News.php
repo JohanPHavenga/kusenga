@@ -55,7 +55,7 @@ class News extends Admin_Controller {
         // set validation rules
         $this->form_validation->set_rules('news_heading', 'Heading', 'required');
         $this->form_validation->set_rules('news_content', 'Content', 'trim|required');
-        $this->form_validation->set_rules('news_posted_date', 'Date to be posted', 'valid_date|required');
+        $this->form_validation->set_rules('news_posted_date', 'Date to be posted', 'date|required');
         $this->form_validation->set_rules('news_org_url', 'Origin URL', 'valid_url');
 
         // load correct view

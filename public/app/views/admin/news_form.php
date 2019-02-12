@@ -29,12 +29,12 @@
         
         <?= $notice ;?>
         
-        
         <?php 
             echo form_open($form_url); 
         ?>
 
         <div class='row'>
+            
             <div class='col-md-6'>
                 <div class="portlet light bordered">
                     <div class="portlet-body">
@@ -66,12 +66,34 @@
                         echo "<div class='form-group'>";
                         echo form_label('Content <span class="required">*</span>', 'news_content');
                         echo form_textarea([
-                            'name' => 'news_content',
-                            'id' => 'news_content',
-                            'value' => utf8_encode(@$news_detail['news_content']),
+                            'name'      => 'news_content',
+                            'id'        => 'news_content',
+                            'value'     => utf8_encode(@$news_detail['news_content']),
+                            'required'  => '',
                         ]);
                         echo "</div>";
-                        
+                    ?>
+                    </div>
+                    <div class="portlet-footer">
+                        <?php
+                        //  BUTTONS
+                        echo "<div class='btn-group'>";
+                        if ($action=="edit") {
+                            echo fbutton($text="Save",$type="submit",$status="primary",NULL,"save_only");
+                        }
+                        echo fbutton($text="Save & Close",$type="submit",$status="success");
+                        echo fbuttonLink($return_url,"Cancel",$status="danger");
+                        echo "</div>";
+                        ?>
+                    </div>
+                </div>
+            </div> <!-- COL -->
+            
+            
+            <div class="col-md-6">
+                <div class="portlet light bordered">
+                    <div class="portlet-body">
+                        <?php
                         echo "<div class='form-group'>";
                             echo "<div class='row'>";
                                 echo "<div class='col-md-4'>";
@@ -105,8 +127,7 @@
                                 'name'          => 'news_org_name',
                                 'id'            => 'news_org_name',
                                 'value'         => set_value('news_org_name', @$news_detail['news_org_name']),
-                                'class'         => 'form-control',
-                                'required'      => '',
+                                'class'         => 'form-control input-large',
                             ]);
 
                         echo "</div>";
@@ -116,13 +137,43 @@
                         echo form_input([
                                 'name'          => 'news_org_url',
                                 'id'            => 'news_org_url',
-                                'value'         => set_value('news_org_name', @$news_detail['news_org_url']),
+                                'value'         => set_value('news_org_url', @$news_detail['news_org_url']),
                                 'class'         => 'form-control',
-                                'required'      => '',
                             ]);
 
                         echo "</div>";
+                      
+                        if ($action=="edit") {
+                        
+                         //  DATES Created + Updated
+                        echo "<div class='form-group'>";
+                            echo "<div class='row'>";
+                                echo "<div class='col-md-4'>";
+                                echo form_label('Date Created', 'created_date');
+                                echo form_input([
+                                        'value'         => set_value('created_date', @$news_detail['created_date']),
+                                        'class'         => 'form-control input-medium',
+                                        'disabled'      => ''
+                                    ]);
 
+                                echo "</div>";
+                                echo "<div class='col-md-6'>";
+                                echo form_label('Date Updated', 'updated_date');
+                                echo form_input([
+                                        'value'         => set_value('updated_date', @$news_detail['updated_date']),
+                                        'class'         => 'form-control input-medium',
+                                        'disabled'      => ''
+                                    ]);
+
+                                echo "</div>";
+                            echo "</div>";
+                        echo "</div>";
+                        }
+                        ?>
+                    </div>
+                    
+                    <div class="portlet-footer">
+                        <?php
                         //  BUTTONS
                         echo "<div class='btn-group'>";
                         if ($action=="edit") {
@@ -131,17 +182,17 @@
                         echo fbutton($text="Save & Close",$type="submit",$status="success");
                         echo fbuttonLink($return_url,"Cancel",$status="danger");
                         echo "</div>";
-                        echo "</div>";
-
-
-                    ?>
+                        ?>
                     </div>
                 </div>
-            </div> <!-- row -->
+            </div>
         </div> <!-- row -->
         
         
-        <?php //wts(@$news_detail); ?>
+        <?php 
+//        wts($author_dropdown);
+//        wts(@$news_detail); 
+        ?>
     </div>
 </div>
 
