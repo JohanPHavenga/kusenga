@@ -20,6 +20,7 @@
         <div class="col">
 
             <?php
+                $n=0;
                 foreach ($news_list as $news_id=>$news) 
                 {
                     $day=date("d",strtotime($news['news_posted_date']));
@@ -33,7 +34,7 @@
                                 <div class="col-sm-8 col-lg-5">
                                     <div class="blog-post-image-wrapper">
                                         <a href="demo-business-consulting-blog-detail.html" title="Read More">
-                                            <img src="assets/img/demos/business-consulting/blog/blog-<?=$news_id;?>.jpg" alt class="img-fluid mb-4" />
+                                            <img src="assets/img/demos/business-consulting/blog/blog-<?=$photo_num_list[$n];?>.jpg" alt class="img-fluid mb-4" />
                                         </a>
                                         <span class="blog-post-date bg-color-primary text-color-light font-weight-bold">
                                                 <?=$day;?>
@@ -64,9 +65,14 @@
 
                     <hr class="solid tall mt-5">
                     <?php
+                    $n++;
                 }
             ?>
            
         </div>
     </div>
 </div>
+
+<?php
+    wts($photo_num_list);
+?>

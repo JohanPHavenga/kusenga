@@ -40,16 +40,7 @@
                     <div class="portlet-body">
                         <?php  
                         // if there was a post, check for validation errors
-                        if ($_POST)
-                        {
-                            if (validation_errors()) {
-                                echo "<div class='note note-danger' role='alert'>";                        
-                                echo validation_errors(); 
-                                echo "</div>";
-                            }
-                        }
-                        echo form_open($form_url); 
-
+                        
 
                         echo "<div class='form-group'>";
                         echo form_label('Name <span class="required">*</span>', 'user_name');
@@ -139,7 +130,10 @@
         </div> <!-- row -->
         
         
-        <?php //wts(@$user_detail); ?>
+        <?php 
+            echo form_close(); 
+            //wts(@$user_detail); 
+        ?>
     </div>
 </div>
 

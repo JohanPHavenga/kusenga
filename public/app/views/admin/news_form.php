@@ -39,16 +39,6 @@
                 <div class="portlet light bordered">
                     <div class="portlet-body">
                         <?php
-                        // if there was a post, check for validation errors
-                        if ($_POST) {
-                            if (validation_errors()) {
-                                echo "<div class='note note-danger' role='alert'>";
-                                echo validation_errors();
-                                echo "</div>";
-                            }
-                        }
-                        echo form_open($form_url);
-
 
                         echo "<div class='form-group'>";
                         echo form_label('Heading <span class="required">*</span>', 'news_heading');
@@ -138,6 +128,7 @@
                             'id' => 'news_org_url',
                             'value' => set_value('news_org_url', @$news_detail['news_org_url']),
                             'class' => 'form-control',
+                            'placeholder' => "https://example.com",
                         ]);
 
                         echo "</div>";
@@ -188,7 +179,8 @@
         </div> <!-- row -->
 
 
-        <?php
+        <?php        
+        echo form_close();
 //        wts($author_dropdown);
 //        wts(@$news_detail); 
         ?>

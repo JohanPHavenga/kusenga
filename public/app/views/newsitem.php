@@ -59,11 +59,11 @@
 
                         <div class="post-block post-author mt-4 clearfix">
                             <h4 class="font-weight-bold text-color-dark pt-2 mb-4">- Author</h4>
-                            <div class="img-thumbnail d-block p-0 no-borders">
+<!--                            <div class="img-thumbnail d-block p-0 no-borders">
                                 <a href="blog-post.html">
                                     <img src="img/team/team-22.jpg" alt="">
                                 </a>
-                            </div>
+                            </div>-->
                             <p><strong class="name mb-3"><?=$news_item['author_name'];?> <?=$news_item['author_surname'];?></strong></p>
                             <p class="mt-1"><?=$news_item['author_description'];?></p>
                         </div>

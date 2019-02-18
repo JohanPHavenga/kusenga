@@ -10,12 +10,15 @@ class News_model extends MY_model {
         return $this->db->count_all("news");
     }
 
-    public function get_news_list($limit = 1000) {
+    public function get_news_list($limit = 1000, $only_published=false) {
         $this->db->select("news.*,user_name, user_surname, author_name, author_surname");
         $this->db->from("news");
         $this->db->join('users', 'user_id', 'left');
         $this->db->join('news_author', 'news_id', 'left');
         $this->db->join('authors', 'author_id', 'left');
+        if ($only_published) {            
+            $this->db->where('news_status', 1);
+        }
         $this->db->order_by("news_posted_date", "DESC");
         $this->db->limit($limit);
         $query = $this->db->get();

@@ -21,7 +21,12 @@ class News extends Frontend_Controller {
          
     public function index()
     {     
-        $this->data_to_view['news_list'] = $this->news_model->get_news_list(3);
+        $number_of_articles=3;
+        $numbers = range(1, $number_of_articles);
+        shuffle($numbers);
+        $this->data_to_view['photo_num_list']=$numbers;
+        
+        $this->data_to_view['news_list'] = $this->news_model->get_news_list($number_of_articles, true);
         $this->load->view($this->header_url, $this->data_to_header);
         $this->load->view('news', $this->data_to_view);
         $this->load->view($this->footer_url, $this->data_to_footer);

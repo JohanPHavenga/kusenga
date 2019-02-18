@@ -56,7 +56,7 @@ class Admin_Controller extends MY_Controller {
         }        
     }
     
-    public function get_notice($notice) {
+    public function get_notice($notice="", $status="info") {
         if ($this->session->flashdata('alert')) {
             $alert_msg = $this->session->flashdata('alert');
             if (!($this->session->flashdata('status'))) {
@@ -66,9 +66,9 @@ class Admin_Controller extends MY_Controller {
             }
             return "<div class='note note-$status' role='alert'>$alert_msg</div>";
         }
-        else 
+        else
         {
-            return "<div class='note note-info'><p>$notice</p></div>";
+            return "<div class='note note-$status'>$notice</div>";
         }
     }
 }
