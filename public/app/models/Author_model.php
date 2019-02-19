@@ -56,7 +56,7 @@ class Author_model extends MY_model {
             $author_data = array(
                 'author_name' => $this->input->post('author_name'),
                 'author_surname' => $this->input->post('author_surname'),
-                'author_description' => $this->input->post('author_email'),
+                'author_description' => $this->input->post('author_description'),
             );
        } 
 

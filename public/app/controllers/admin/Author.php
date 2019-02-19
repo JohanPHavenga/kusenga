@@ -51,11 +51,19 @@ class Author extends Admin_Controller {
         // set validation rules
         $this->form_validation->set_rules('author_name', 'Name', 'required');
         $this->form_validation->set_rules('author_surname', 'Surname', 'required');
-//        $this->form_validation->set_rules('author_description', 'Description', 'required');
+        $this->form_validation->set_rules('author_description', 'Description', 'required');
 
         // load correct view
         if ($this->form_validation->run() === FALSE)
         {
+            // put all the fields from post into array
+            foreach ($_POST as $field => $value) {
+                $this->data_to_view['author_detail'][$field] = $value;
+            }
+            if (validation_errors()) {
+                $this->data_to_view['notice'] = $this->get_notice(validation_errors(), "danger");
+            }
+            
             $this->data_to_view['return_url']=$this->return_url;
             $this->load->view($this->header_url, $this->data_to_header);
             $this->load->view($this->sidebar_url, $this->data_to_sidebar);

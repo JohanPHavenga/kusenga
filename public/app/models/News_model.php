@@ -18,6 +18,7 @@ class News_model extends MY_model {
         $this->db->join('authors', 'author_id', 'left');
         if ($only_published) {            
             $this->db->where('news_status', 1);
+            $this->db->where('news_posted_date <= ', date("Y-m-d"));
         }
         $this->db->order_by("news_posted_date", "DESC");
         $this->db->limit($limit);

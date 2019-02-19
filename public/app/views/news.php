@@ -74,5 +74,5 @@
 </div>
 
 <?php
-    wts($photo_num_list);
+//    wts($photo_num_list);
 ?>

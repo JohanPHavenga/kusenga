@@ -21,6 +21,12 @@
                     <span class="title">Users</span>
                 </a>
             </li> 
+            <li class="nav-item <?php if ($section=="author") { echo "active"; } ?>">
+                <a href="/admin/author" class="nav-link nav-toggle">
+                    <i class="icon-pencil"></i>
+                    <span class="title">Authors</span>
+                </a>
+            </li> 
         </ul>
     </div>
 </div>

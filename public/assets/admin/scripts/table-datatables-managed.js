@@ -3,7 +3,7 @@ var TableDatatablesManaged = function () {
     var initUsersTable = function () {
         var table = $('#user_table');
         table.dataTable({
-            order: [[0,"desc"]],
+            order: [[0,"asc"]],
             responsive: true,
             columnDefs: [
                 { orderable: false, targets: [4] }, 
@@ -12,6 +12,20 @@ var TableDatatablesManaged = function () {
                 { responsivePriority: 2, targets: -1 },
                 { responsivePriority: 3, targets: 1 }
                 
+            ]
+        });   
+    };
+    
+    var initAuthorsTable = function () {
+        var table = $('#author_table');
+        table.dataTable({
+            order: [[0,"asc"]],
+            responsive: true,
+            columnDefs: [
+                { orderable: false, targets: [-1] }, 
+                { searchable: false, targets: [-1] },
+                { responsivePriority: 1, targets: 0 },
+                { responsivePriority: 2, targets: -1 }                
             ]
         });   
     };
@@ -40,6 +54,7 @@ var TableDatatablesManaged = function () {
                 return;
             }
             initUsersTable();
+            initAuthorsTable();
             initNewsTable();
         }
     };

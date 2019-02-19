@@ -54,11 +54,15 @@ class User extends Admin_Controller {
 
         // load correct view
         if ($this->form_validation->run() === FALSE) {
-            $this->data_to_view['return_url'] = $this->return_url;
+            // put all the fields from post into array
+            foreach ($_POST as $field => $value) {
+                $this->data_to_view['user_detail'][$field] = $value;
+            }
             if (validation_errors()) {
                 $this->data_to_view['notice'] = $this->get_notice(validation_errors(), "danger");
-            }
-
+            }            
+            
+            $this->data_to_view['return_url'] = $this->return_url;
             $this->load->view($this->header_url, $this->data_to_header);
             $this->load->view($this->sidebar_url, $this->data_to_sidebar);
             $this->load->view("/admin/user_form", $this->data_to_view);
