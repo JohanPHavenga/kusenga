@@ -17,6 +17,20 @@
 
 <div class="container">
     <div class="row pt-1 pb-4 mb-3">
-    <p>We would love to hear from you. Please use the form below to contact us.</p>
+    <?php
+    if ($_POST) {
+        if (!@$email_send) {
+            echo '<div class="alert alert-danger" role="alert">';
+            echo validation_errors();
+            echo '</div>';
+        } else {
+            echo '<div class="alert alert-success" role="alert">';
+            echo "Thank you for contacting us. <b>Your message has been sent successfully.</b><br>We will get back to you as soon as we can.";
+            echo '</div>';
+        }
+    } else {
+        echo "<p>We would love to hear from you. Please use the form below to contact us.</p>";
+    }
+    ?>
     </div>
 </div>

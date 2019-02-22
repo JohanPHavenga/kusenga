@@ -1,4 +1,4 @@
-            <section class="section section-text-light section-background m-0" style="background: url('/assets/img/contact-background.jpg'); background-size: cover;">
+            <section class="section section-text-light section-background m-0" style="background: url('<?= base_url(); ?>/assets/img/contact-background.jpg'); background-size: cover;">
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -64,7 +64,7 @@
                         </div>
                         <div class="col-lg-6 custom-sm-margin-top">
                             <h2 class="font-weight-bold">- Write Us</h2>
-                            <form id="contactForm" class="contact-form custom-contact-form-style-1" action="php/contact-form.php" method="POST">
+                            <form id="contactForm" class="contact-form custom-contact-form-style-1" action="<?=base_url("contact");?>" method="POST">
                                 <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
                                     <strong>Success!</strong> Your message has been sent to us.
                                 </div>
@@ -74,12 +74,11 @@
                                     <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
                                 </div>
 
-                                <input type="hidden" name="subject" value="Contact Message Received" />
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <div class="custom-input-box">
                                             <i class="icon-user icons text-color-primary"></i>
-                                            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" placeholder="Name*" required>
+                                            <input type="text" value="<?= @$form_data['dname']; ?>" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="dname" id="dname" placeholder="Name*" required>
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +86,7 @@
                                     <div class="form-group col">
                                         <div class="custom-input-box">
                                             <i class="icon-envelope icons text-color-primary"></i>
-                                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" placeholder="Email*" required>
+                                            <input type="email" value="<?= @$form_data['demail']; ?>" data-msg-required="Please enter your email address." data-msg-email="Plamease enter a valid email address." maxlength="100" class="form-control" name="demail" id="demail" placeholder="Email*" required>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +94,7 @@
                                     <div class="form-group col">
                                         <div class="custom-input-box">
                                             <i class="icon-bubble icons text-color-primary"></i>
-                                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" placeholder="Message*" required></textarea>
+                                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="dmsg" id="dmsg" placeholder="Message*" ><?= @$form_data['dmsg']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +114,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center pb-4">
-                            <p>2018 © Kusenga <span class="text-color-light">Accessible Insights</span> - Copyright All Rights Reserved</p>
+                            <p><?= date("Y");?> © Kusenga <span class="text-color-light">Accessible Insights</span> - Copyright All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
@@ -124,40 +123,40 @@
         </div> <!-- body -->
 
         <!-- Vendor -->
-        <script src="/vendor/jquery/jquery.min.js"></script>
-        <script src="/vendor/jquery.appear/jquery.appear.min.js"></script>
-        <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
-        <script src="/vendor/jquery.cookie/jquery.cookie.min.js"></script>
-        <script src="/vendor/popper/umd/popper.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/vendor/common/common.min.js"></script>
-        <script src="/vendor/jquery.validation/jquery.validate.min.js"></script>
-        <script src="/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-        <script src="/vendor/jquery.gmap/jquery.gmap.min.js"></script>
-        <script src="/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-        <script src="/vendor/isotope/jquery.isotope.min.js"></script>
-        <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
-        <script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script src="/vendor/vide/jquery.vide.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery/jquery.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.appear/jquery.appear.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/popper/umd/popper.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/common/common.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.validation/jquery.validate.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/isotope/jquery.isotope.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/vide/jquery.vide.min.js"></script>
 
         <!-- Theme Base, Components and Settings -->
-        <script src="/assets/js/theme.js"></script>
+        <script src="<?= base_url(); ?>/assets/js/theme.js"></script>
 
         <!-- Current Page Vendor and Views -->
-        <script src="/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-        <script src="/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script src="<?= base_url(); ?>/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
         <!-- Current Page Vendor and Views -->
-        <script src="/assets/js/view.contact.js"></script>
+        <!--<script src="<?= base_url(); ?>/assets/js/view.contact.js"></script>-->
 
         <!-- Demo -->
-        <script src="/assets/js/demo-business-consulting.js"></script>
+        <script src="<?= base_url(); ?>/assets/js/demo-business-consulting.js"></script>
 
         <!-- Theme Custom -->
-        <script src="/assets/js/custom.js"></script>
+        <script src="<?= base_url(); ?>/assets/js/custom.js"></script>
 
         <!-- Theme Initialization Files -->
-        <script src="/assets/js/theme.init.js"></script>
+        <script src="<?= base_url(); ?>/assets/js/theme.init.js"></script>
 
 
 
